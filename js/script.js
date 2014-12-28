@@ -23,11 +23,15 @@ $(function() {
 		var scrollPosition = $(window).scrollTop();
 
 		if (scrollPosition > preNavbarHeight) {
+			if ($('#navbar').data('fixed')) return;
+			$('#navbar').data('fixed',true);
 			$('#navbar').addClass('navbar-fixed-top');
-			$('#navbar .navbar-brand').stop().animate({width: 'show'}, 100);
+			$('#navbar .navbar-brand').stop().css({"opacity": 0}).animate({width: 'show'}, 100).animate({"opacity": 1},500);
 		} else {
+			if (!$('#navbar').data('fixed')) return;
+			$('#navbar').data('fixed',false);
 			$('#navbar').removeClass('navbar-fixed-top');
-			$('#navbar .navbar-brand').stop().animate({width: 'hide'}, 100);
+			$('#navbar .navbar-brand').stop().animate({"opacity": 0},500).animate({width: 'hide'}, 100);
 		}
 	});
 
