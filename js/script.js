@@ -1,5 +1,8 @@
 $(function() {
-
+	// Tooltip
+	$(function () {
+	  $('[data-toggle="tooltip"]').tooltip();
+	});
 	// ###### parallax ######
 	// Check for powerful desktop platform
 	if (
