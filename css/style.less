@@ -62,7 +62,10 @@ body {
 }
 // Acordiom
 .panel-body {
-	background-color:none;
+	&.context-collective { background-color: @color-context-collective; }
+	&.context-manifest { background-color: @color-context-manifest; }
+	&.context-services { background-color: @color-context-services; }
+	&.context-intention { background-color: @color-context-intention; }
 }
 // Navigations
 .navbar {
