@@ -50,79 +50,142 @@ p {
   margin: 20px 0 15px 0;
 }
 
-// Main
-//.row > div { 
-//	outline: 1px dashed #111;
-//}
+
 html {
 	min-height: 100%;
 }
 body {
-	&.context-collective { background-color: @color-context-collective; }
-	&.context-manifest { background-color: @color-context-manifest; }
-	&.context-services { background-color: @color-context-services; }
-	&.context-intention { background-color: @color-context-intention; }
-	background-image: url("../images/natural_paper.png");
 	font-family: praterserifone-regularregular;
 	min-height: 100%;
+	background-image: url("../images/natural_paper.png");
+
 }
-// Acordiom
-.panel {
-	background-color: @color-context-manifest;
-	border:none;
+
+// Colorerd background depending on page
+.context-collective {
+	background-color: @color-context-collective;
 	background-image: url("../images/natural_paper.png");
 }
-.panel-title  {
-  font-size: 30px;
-  margin: 3px 3px 3px 3px;
-  padding: 0;
-  line-height: 34px;
-}
-.panel-body  {
-	border: none;
-	font-size: 20px;
-	margin: 0 0 0 0;
-	padding: 14px;
-	line-height: 30px;
-}
-.panel-default  {
+.context-manifest {
 	background-color: @color-context-manifest;
-	border:none;
 	background-image: url("../images/natural_paper.png");
 }
+.context-services {
+	background-color: @color-context-services;
+	background-image: url("../images/natural_paper.png");
+}
+.context-intention {
+	background-color: @color-context-intention;
+	background-image: url("../images/natural_paper.png");
+}
+
+
+
 
 // Navigations
 .navbar {
 	border: 1px dashed #1d1d1b;
 	border-width: 1px 0 1px 0;
+	border-radius: 0;
 	background-image: url("../images/natural_paper.png");
-	&.context-collective { background-color: @color-context-collective; }
-	&.context-manifest { background-color: @color-context-manifest; }
-	&.context-services { background-color: @color-context-services; }
-	&.context-intention { background-color: @color-context-intention; }
 
-
-	.navbar-brand img {
-		width: 150px;
+	.navbar-header.show-logo {
+		background-image: url("../images/logo.svg");
+		background-position: center;
+		background-size: 150px 41px;
+		background-repeat: no-repeat;
 	}
-.subnavbar {
-	border: 1px dashed #1d1d1b;
-	border-width: 1px 0 0 0;
-	background-image: none;
-	background-color: none;
+
+	.navbar-toggle {
+		background-color: rgba(255, 255, 255, 0.25);
+		border-width: 0;
+		padding: 15px 15px 15px 15px;
+		margin: 15px 15px 15px 15px;
+
+		.icon-bar {
+			background-color: @color-neutral-dark;
+			height: 3px;
+		}
+
+		&:hover, &:active, &:focus {
+			background-color: rgba(255, 255, 255, 0.25);
+			.icon-bar {
+				background-color: @color-neutral-dark;
+			}
+		}
+	}
+
+	.subnavbar {
+		border: 1px dashed #1d1d1b;
+		border-width: 1px 0 0 0;
+		background-image: none;
+		background-color: none;
 	}	
+
+	.navbar-collapse {
+		padding-left: 0;
+		padding-right: 15px;
+
+		&.show-logo {
+			background-image: url("../images/logo.svg");
+			background-position: center;
+			background-size: 150px 41px;
+			background-repeat: no-repeat;
+		}
+
+		@media(max-width:767px) {
+			background-image: url("../images/natural_paper.png");
+			background-color: @color-context-default;
+		}		
+	}
 
 	.navbar-nav {
 		> li > a {
 			background-color: rgba(255, 255, 255, 0.25);
-			padding: 7px;
+			padding: 10px 6px 10px 6px;
 			border-radius: 7px;
-			margin-top: 20px;
-			margin-bottom: 20px;
-			margin-left: 2px;
-			margin-right: 2px;
+			margin: 20px 2px 20px 2px;
 			color: @color-neutral-dark;
+
+			@media(max-width:767px) {
+				margin: 5px 15px 5px 15px;
+				background-image: url("../images/natural_paper.png");
+				color: @color-neutral-dark;
+
+				span {
+					// Description text next to icons
+					font-size: 22px;
+				}
+			}
+
+			&.color-context-intention {
+				@media(max-width:767px) {
+					background-color: @color-context-intention;
+				}
+			}
+			&.color-context-collective {
+				@media(max-width:767px) {
+					background-color: @color-context-collective;
+				}
+			}
+			&.color-context-manifest {
+				@media(max-width:767px) {
+					background-color: @color-context-manifest;
+				}
+			}
+			&.color-context-services {
+				@media(max-width:767px) {
+					background-color: @color-context-services;
+				}
+			}
+			&.color-context-default {
+				@media(max-width:767px) {
+					background-color: @color-context-default;
+				}
+			}
+
 		}
+
 
 		> li.active > a, > li > a:hover, > li.active > a:hover, > li.dropdown > a:hover {
 			background-image: none;
@@ -148,14 +211,44 @@ body {
 		}
 	}
 }
+.context-collective .navbar { background-color: @color-context-collective; }
+.context-manifest .navbar { background-color: @color-context-manifest; }
+.context-services .navbar { background-color: @color-context-services; }
+.context-intention .navbar { background-color: @color-context-intention; }
+
+.navbar-fixed-top .navbar-collapse {
+	max-height: none;
+}
+
+
+
+// Acordion
+.panel-default > .panel-heading {
+	background-color: @color-context-default;
+}
+.panel-title  {
+	font-size: 30px;
+	margin: 3px 3px 3px 3px;
+	padding: 0;
+	line-height: 34px;
+}
+.panel-body  {
+	border: none;
+	font-size: 20px;
+	margin: 0 0 0 0;
+	padding: 14px;
+	line-height: 30px;
+}
+.panel-default  {
+	border:none;
+	background-color: transparent;
+	box-shadow: none;
+}
 
 
 
 
-
-
-
-
+// Modifiers for Skin
 
 .top5 { margin-top:5px !important; }
 .top7 { margin-top:7px !important; }
@@ -174,4 +267,9 @@ body {
 
 .w100 {
 	width: 100%;
+}
+.w80 {
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
 }
