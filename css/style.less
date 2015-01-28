@@ -127,10 +127,12 @@ body {
 		padding-right: 15px;
 
 		&.show-logo {
-			background-image: url("../images/logo.svg");
-			background-position: center;
-			background-size: 150px 41px;
-			background-repeat: no-repeat;
+			@media(min-width:768px) {
+				background-image: url("../images/logo.svg");
+				background-position: center;
+				background-size: 150px 41px;
+				background-repeat: no-repeat;
+			}
 		}
 
 		@media(max-width:767px) {
@@ -148,7 +150,7 @@ body {
 			color: @color-neutral-dark;
 
 			@media(max-width:767px) {
-				margin: 5px 15px 5px 15px;
+				margin: 5px 30px 5px 15px;
 				background-image: url("../images/natural_paper.png");
 				color: @color-neutral-dark;
 
