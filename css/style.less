@@ -9,6 +9,24 @@
 		url("../fonts/praterserifone-regular-webfont.svg#praterserifone-regularregular") format('svg');
 	font-weight: normal;
 	font-style: normal;
+
+		font-family: "PraterSansOne-Regular";
+	src: url("../fonts/PraterSansOne-Regular.eot");
+	src: url("../fonts/PraterSansOne-Regular.eot?#iefix") format('embedded-opentype'),
+		url("../fonts/PraterSansOne-Regular.woff") format('woff'),
+		url("../fonts/PraterSansOne-Regular.ttf") format('truetype'),
+		url("../fonts/PraterSansOne-Regular.svg") format('svg');
+	font-weight: normal;
+	font-style: normal;
+
+			font-family: "PraterBlockOne-Fill";
+	src: url("../fonts/PraterBlockOne-Fill.eot");
+	src: url("../fonts/PraterBlockOne-Fill.eot?#iefix") format('embedded-opentype'),
+		url("../fonts/PraterBlockOne-Fill.woff") format('woff'),
+		url("../fonts/PraterBlockOne-Fill.ttf") format('truetype'),
+		url("../fonts/PraterBlockOne-Fill.svg") format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 // Colors
 @color-context-intention: #73c48a;
@@ -20,109 +38,228 @@
 
 // Text
 h1 {
+  font-family: PraterSansOne-regular;	
   font-size: 60px;
   line-height: 64px;
   margin: 20px 0 0 0;
   padding: 0;
 }
 h2 {
-  font-size: 30px;
+  font-family: PraterSansOne-regular;	
+  font-size: 40px;
   margin: 20px 0 0 0;
   padding: 0;
-  line-height: 34px;
+  line-height: 44px;
 }
 h3 {
-  font-size: 24px;
-  line-height: 28px; 
+  font-family: PraterSansOne-regular;	
+  font-size: 30px;
+  line-height: 34px; 
   margin: 20px 0 15px 0;
 }
-// Acordiom Panel Title
 h4  {
-  font-size: 30px;
-  margin: 20px 0 0 0;
+  font-family: PraterSansOne-regular;		
+  font-size: 24px;
+  margin: 10px 0 0px 0;
   padding: 0;
-  line-height: 34px;
+  line-height: 28px;
 }
-
+h5  {
+  font-family: PraterBlockOne-Fill;		
+  font-size: 30px;
+  margin: 10px 0 20px 0;
+  padding: 0;
+  line-height: 30px;
+}
 p {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 18px;
   line-height: 24px; 
-  margin: 20px 0 15px 0;
+  margin: 0px 0 0px 0;
+}
+p small,
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small,
+.p small,
+.h1 small,
+.h2 small,
+.h3 small,
+.h4 small,
+.h5 small,
+.h6 small,
+p .small,
+h1 .small,
+h2 .small,
+h3 .small,
+h4 .small,
+h5 .small,
+h6 .small,
+.p .small,
+.h1 .small,
+.h2 .small,
+.h3 .small,
+.h4 .small,
+.h5 .small,
+.h6 .small{
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 12px;
+  color: #333;
+  opacity: none;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  line-height: 20px;
+  font-weight: 20px;
 }
 
-// Main
-//.row > div { 
-//	outline: 1px dashed #111;
-//}
+
 html {
 	min-height: 100%;
 }
 body {
-	&.context-collective { background-color: @color-context-collective; }
-	&.context-manifest { background-color: @color-context-manifest; }
-	&.context-services { background-color: @color-context-services; }
-	&.context-intention { background-color: @color-context-intention; }
-	background-image: url("../images/natural_paper.png");
-	font-family: praterserifone-regularregular;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	min-height: 100%;
-}
-// Acordiom
-.panel {
-	background-color: @color-context-manifest;
-	border:none;
 	background-image: url("../images/natural_paper.png");
 }
-.panel-title  {
-  font-size: 30px;
-  margin: 3px 3px 3px 3px;
-  padding: 0;
-  line-height: 34px;
+.dotline{
+    border-top-color: #1d1d1b;
+    border-top-radius: 0;
+    border-top-style: dashed;
+    border-top-width: 1px;
+    padding:0px 0px 0px 0px;
 }
-.panel-body  {
-	border: none;
-	font-size: 20px;
-	margin: 0 0 0 0;
-	padding: 14px;
-	line-height: 30px;
-}
-.panel-default  {
-	background-color: @color-context-manifest;
-	border:none;
+
+// Colorerd background depending on page
+.context-collective {
+	background-color: @color-context-collective;
 	background-image: url("../images/natural_paper.png");
 }
+.context-manifest {
+	background-color: @color-context-manifest;
+	background-image: url("../images/natural_paper.png");
+}
+.context-services {
+	background-color: @color-context-services;
+	background-image: url("../images/natural_paper.png");
+}
+.context-intention {
+	background-color: @color-context-intention;
+	background-image: url("../images/natural_paper.png");
+}
+
+
+
 
 // Navigations
 .navbar {
 	border: 1px dashed #1d1d1b;
 	border-width: 1px 0 1px 0;
+	border-radius: 0;
 	background-image: url("../images/natural_paper.png");
-	&.context-collective { background-color: @color-context-collective; }
-	&.context-manifest { background-color: @color-context-manifest; }
-	&.context-services { background-color: @color-context-services; }
-	&.context-intention { background-color: @color-context-intention; }
+	margin-bottom: 0px;
 
-
-	.navbar-brand img {
-		width: 150px;
+	.navbar-header.show-logo {
+		background-image: url("../images/logo.svg");
+		background-position: center;
+		background-size: 150px 41px;
+		background-repeat: no-repeat;
 	}
-.subnavbar {
-	border: 1px dashed #1d1d1b;
-	border-width: 1px 0 0 0;
-	background-image: none;
-	background-color: none;
+
+	.navbar-toggle {
+		background-color: rgba(255, 255, 255, 0.25);
+		border-width: 0;
+		padding: 15px 15px 15px 15px;
+		margin: 15px 15px 15px 15px;
+
+		.icon-bar {
+			background-color: @color-neutral-dark;
+			height: 3px;
+		}
+
+		&:hover, &:active, &:focus {
+			background-color: rgba(255, 255, 255, 0.25);
+			.icon-bar {
+				background-color: @color-neutral-dark;
+			}
+		}
+	}
+
+	.subnavbar {
+		border: 1px dashed #1d1d1b;
+		border-width: 1px 0 0 0;
+		background-image: none;
+		background-color: none;
 	}	
+
+	.navbar-collapse {
+		padding-left: 0;
+		padding-right: 15px;
+
+		&.show-logo {
+			@media(min-width:768px) {
+				background-image: url("../images/logo.svg");
+				background-position: center;
+				background-size: 150px 41px;
+				background-repeat: no-repeat;
+			}
+		}
+
+		@media(max-width:767px) {
+			background-image: url("../images/natural_paper.png");
+			background-color: @color-context-default;
+		}		
+	}
 
 	.navbar-nav {
 		> li > a {
 			background-color: rgba(255, 255, 255, 0.25);
-			padding: 7px;
+			padding: 10px 6px 10px 6px;
 			border-radius: 7px;
-			margin-top: 20px;
-			margin-bottom: 20px;
-			margin-left: 2px;
-			margin-right: 2px;
+			margin: 20px 2px 20px 2px;
 			color: @color-neutral-dark;
+
+			@media(max-width:767px) {
+				margin: 5px 15px 5px 30px;
+				background-image: url("../images/natural_paper.png");
+				color: @color-neutral-dark;
+
+				span {
+					// Description text next to icons
+					font-size: 22px;
+				}
+			}
+
+			&.color-context-intention {
+				@media(max-width:767px) {
+					background-color: @color-context-intention;
+				}
+			}
+			&.color-context-collective {
+				@media(max-width:767px) {
+					background-color: @color-context-collective;
+				}
+			}
+			&.color-context-manifest {
+				@media(max-width:767px) {
+					background-color: @color-context-manifest;
+				}
+			}
+			&.color-context-services {
+				@media(max-width:767px) {
+					background-color: @color-context-services;
+				}
+			}
+			&.color-context-default {
+				@media(max-width:767px) {
+					background-color: @color-context-default;
+				}
+			}
+
 		}
+
 
 		> li.active > a, > li > a:hover, > li.active > a:hover, > li.dropdown > a:hover {
 			background-image: none;
@@ -149,13 +286,87 @@ body {
 	}
 }
 
+.dropdown-menu {
+    background-clip: padding-box;
+    background-color: #333;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+    display: none;
+    float: left;
+    font-size: 14px;
+    left: 0;
+    list-style: outside none none;
+    margin: 2px 0 0;
+    min-width: 160px;
+    padding: 5px 0;
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    z-index: 1000;
+}
+.context-collective .navbar { background-color: @color-context-collective; }
+.context-manifest .navbar { background-color: @color-context-manifest; }
+.context-services .navbar { background-color: @color-context-services; }
+.context-intention .navbar { background-color: @color-context-intention; }
+
+.navbar-fixed-top .navbar-collapse {
+	max-height: none;
+}
 
 
 
+// Acordion
+.panel-default > .panel-heading {
+	background-color: @color-context-default;
+}
+.panel-title  {
+  font-family: PraterSansOne-regular;	
+  font-size: 36px;
+  padding: 0;
+  line-height: 40px;
+}
+.panel-body  {
+	border: none;
+	font-size: 18px;
+	margin: 0 0 0 0;
+	padding: 14px;
+	line-height: 24px;
+}
+.panel-default  {
+	border:none;
+	background-color: transparent;
+	box-shadow: none;
+}
 
+// Buttons
+.btn-primary {
+    color: #FFF;
+    background-color: #333;
+    border-color: #333;
+        border-top-color: #333;
+        border-right-color-value: #333;
+        border-bottom-color: #333;
+        border-left-color-value: #333;
+        border-left-color-ltr-source: physical;
+        border-left-color-rtl-source: physical;
+        border-right-color-ltr-source: physical;
+        border-right-color-rtl-source: physical;
+}
+.btn-lg, .btn-group-lg > .btn {
+    padding: 8px 14px;
+    font-size: 16px;
+    line-height: 1.33;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+        border-bottom-left-radius: 6px;
+}
 
-
-
+// Modifiers for Skin
 
 .top5 { margin-top:5px !important; }
 .top7 { margin-top:7px !important; }
@@ -166,6 +377,8 @@ body {
 .bottom7 { margin-bottom:7px; }
 .bottom17 { margin-bottom:17px; }
 .bottom30 { margin-bottom:30px; }
+.bottom50 { margin-bottom:50px; }
+.bottom70 { margin-bottom:70px; }
 .left10 { margin-left:10px; }
 .left25 { margin-left:25px !important; }
 .right15 { margin-right:15px !important; }
@@ -174,4 +387,9 @@ body {
 
 .w100 {
 	width: 100%;
+}
+.w80 {
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
 }
