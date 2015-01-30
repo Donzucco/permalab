@@ -38,67 +38,81 @@
 
 // Text
 h1 {
+  font-family: PraterSansOne-regular;	
   font-size: 60px;
   line-height: 64px;
   margin: 20px 0 0 0;
   padding: 0;
 }
 h2 {
-  font-size: 30px;
+  font-family: PraterSansOne-regular;	
+  font-size: 40px;
   margin: 20px 0 0 0;
   padding: 0;
-  line-height: 34px;
+  line-height: 44px;
 }
 h3 {
-  font-size: 24px;
-  line-height: 28px; 
+  font-family: PraterSansOne-regular;	
+  font-size: 30px;
+  line-height: 34px; 
   margin: 20px 0 15px 0;
 }
-// Acordiom Panel Title
 h4  {
-  font-size: 30px;
-  margin: 20px 0 0 0;
+  font-family: PraterSansOne-regular;		
+  font-size: 24px;
+  margin: 20px 0 0px 0;
   padding: 0;
-  line-height: 34px;
+  line-height: 28px;
 }
+h5  {
+  font-family: PraterBlockOne-Fill;		
+  font-size: 30px;
+  margin: 10px 0 20px 0;
+  padding: 0;
+  line-height: 30px;
+}
+p {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 18px;
+  line-height: 24px; 
+  margin: 0px 0 0px 0;
+}
+p small,
 h1 small,
 h2 small,
 h3 small,
 h4 small,
 h5 small,
 h6 small,
+.p small,
 .h1 small,
 .h2 small,
 .h3 small,
 .h4 small,
 .h5 small,
 .h6 small,
+p .small,
 h1 .small,
 h2 .small,
 h3 .small,
 h4 .small,
 h5 .small,
 h6 .small,
+.p .small,
 .h1 .small,
 .h2 .small,
 .h3 .small,
 .h4 .small,
 .h5 .small,
 .h6 .small{
-  font-family: PraterBlockOne-Fill;
-  font-size: 18px;
-  color: #404041;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 12px;
+  color: #333;
   opacity: none;
-  margin: 8px 0 0 0;
-  padding: 0;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
   line-height: 20px;
-  font-weight: 24px;
-}
-
-p {
-  font-size: 18px;
-  line-height: 24px; 
-  margin: 20px 0 15px 0;
+  font-weight: 20px;
 }
 
 
@@ -106,17 +120,16 @@ html {
 	min-height: 100%;
 }
 body {
-	font-family: PraterSansOne-regular;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	min-height: 100%;
 	background-image: url("../images/natural_paper.png");
-
 }
 .dotline{
     border-top-color: #1d1d1b;
     border-top-radius: 0;
     border-top-style: dashed;
     border-top-width: 1px;
-    margin:50px 0px 50px 0px;
+    padding:0px 0px 0px 0px;
 }
 
 // Colorerd background depending on page
@@ -146,6 +159,7 @@ body {
 	border-width: 1px 0 1px 0;
 	border-radius: 0;
 	background-image: url("../images/natural_paper.png");
+	margin-bottom: 0px;
 
 	.navbar-header.show-logo {
 		background-image: url("../images/logo.svg");
@@ -271,6 +285,26 @@ body {
 		}
 	}
 }
+
+.dropdown-menu {
+    background-clip: padding-box;
+    background-color: #333;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+    display: none;
+    float: left;
+    font-size: 14px;
+    left: 0;
+    list-style: outside none none;
+    margin: 2px 0 0;
+    min-width: 160px;
+    padding: 5px 0;
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    z-index: 1000;
+}
 .context-collective .navbar { background-color: @color-context-collective; }
 .context-manifest .navbar { background-color: @color-context-manifest; }
 .context-services .navbar { background-color: @color-context-services; }
@@ -287,17 +321,17 @@ body {
 	background-color: @color-context-default;
 }
 .panel-title  {
-	font-size: 30px;
-	margin: 3px 3px 3px 0px;
-	padding: 0;
-	line-height: 34px;
+  font-family: PraterSansOne-regular;	
+  font-size: 36px;
+  padding: 0;
+  line-height: 40px;
 }
 .panel-body  {
 	border: none;
-	font-size: 20px;
+	font-size: 18px;
 	margin: 0 0 0 0;
 	padding: 14px;
-	line-height: 30px;
+	line-height: 24px;
 }
 .panel-default  {
 	border:none;
@@ -305,8 +339,32 @@ body {
 	box-shadow: none;
 }
 
-
-
+// Buttons
+.btn-primary {
+    color: #FFF;
+    background-color: #333;
+    border-color: #333;
+        border-top-color: #333;
+        border-right-color-value: #333;
+        border-bottom-color: #333;
+        border-left-color-value: #333;
+        border-left-color-ltr-source: physical;
+        border-left-color-rtl-source: physical;
+        border-right-color-ltr-source: physical;
+        border-right-color-rtl-source: physical;
+}
+.btn-lg, .btn-group-lg > .btn {
+    padding: 8px 14px;
+    font-size: 16px;
+    line-height: 1.33;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+        border-bottom-left-radius: 6px;
+}
 
 // Modifiers for Skin
 
@@ -319,6 +377,8 @@ body {
 .bottom7 { margin-bottom:7px; }
 .bottom17 { margin-bottom:17px; }
 .bottom30 { margin-bottom:30px; }
+.bottom50 { margin-bottom:50px; }
+.bottom70 { margin-bottom:70px; }
 .left10 { margin-left:10px; }
 .left25 { margin-left:25px !important; }
 .right15 { margin-right:15px !important; }
