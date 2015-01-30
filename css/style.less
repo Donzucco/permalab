@@ -9,6 +9,24 @@
 		url("../fonts/praterserifone-regular-webfont.svg#praterserifone-regularregular") format('svg');
 	font-weight: normal;
 	font-style: normal;
+
+		font-family: "PraterSansOne-Regular";
+	src: url("../fonts/PraterSansOne-Regular.eot");
+	src: url("../fonts/PraterSansOne-Regular.eot?#iefix") format('embedded-opentype'),
+		url("../fonts/PraterSansOne-Regular.woff") format('woff'),
+		url("../fonts/PraterSansOne-Regular.ttf") format('truetype'),
+		url("../fonts/PraterSansOne-Regular.svg") format('svg');
+	font-weight: normal;
+	font-style: normal;
+
+			font-family: "PraterBlockOne-Fill";
+	src: url("../fonts/PraterBlockOne-Fill.eot");
+	src: url("../fonts/PraterBlockOne-Fill.eot?#iefix") format('embedded-opentype'),
+		url("../fonts/PraterBlockOne-Fill.woff") format('woff'),
+		url("../fonts/PraterBlockOne-Fill.ttf") format('truetype'),
+		url("../fonts/PraterBlockOne-Fill.svg") format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 // Colors
 @color-context-intention: #73c48a;
@@ -43,6 +61,39 @@ h4  {
   padding: 0;
   line-height: 34px;
 }
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small,
+.h1 small,
+.h2 small,
+.h3 small,
+.h4 small,
+.h5 small,
+.h6 small,
+h1 .small,
+h2 .small,
+h3 .small,
+h4 .small,
+h5 .small,
+h6 .small,
+.h1 .small,
+.h2 .small,
+.h3 .small,
+.h4 .small,
+.h5 .small,
+.h6 .small{
+  font-family: PraterBlockOne-Fill;
+  font-size: 18px;
+  color: #404041;
+  opacity: none;
+  margin: 8px 0 0 0;
+  padding: 0;
+  line-height: 20px;
+  font-weight: 24px;
+}
 
 p {
   font-size: 18px;
@@ -55,10 +106,17 @@ html {
 	min-height: 100%;
 }
 body {
-	font-family: praterserifone-regularregular;
+	font-family: PraterSansOne-regular;
 	min-height: 100%;
 	background-image: url("../images/natural_paper.png");
 
+}
+.dotline{
+    border-top-color: #1d1d1b;
+    border-top-radius: 0;
+    border-top-style: dashed;
+    border-top-width: 1px;
+    margin:50px 0px 50px 0px;
 }
 
 // Colorerd background depending on page
@@ -230,7 +288,7 @@ body {
 }
 .panel-title  {
 	font-size: 30px;
-	margin: 3px 3px 3px 3px;
+	margin: 3px 3px 3px 0px;
 	padding: 0;
 	line-height: 34px;
 }
