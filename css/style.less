@@ -343,6 +343,27 @@ transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 .navbar-fixed-top .navbar-collapse {
 	max-height: none;
 }
+// Active Box
+.activebox.active, .activebox:hover ,activebox:focus {
+    background-color: @color-context-intention;
+    border-color: transparent;
+    color: #fff;
+}
+a.activebox{
+    color: @color-neutral-dark;
+    text-decoration: none;	
+}
+.activebox {
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 0px solid transparent;
+    display: block;
+    margin-bottom: 4px;
+    border-radius: 3px;
+    padding: 3px 26px 30px;
+    position: relative;
+    text-align: center;
+}
+
 
 // Filter Navigation
 .list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
@@ -462,8 +483,9 @@ a.list-group-item {
 .top15 { margin-top:15px !important; }
 .top17 { margin-top:17px !important; }
 .top30 { margin-top:30px !important; }
-.bottom7 { margin-bottom:7px; }
-.bottom17 { margin-bottom:17px; }
+.top70 { margin-top:70px !important; }
+.bottom10 { margin-bottom:10px; }
+.bottom15 { margin-bottom:15px; }
 .bottom30 { margin-bottom:30px; }
 .bottom50 { margin-bottom:50px; }
 .bottom70 { margin-bottom:70px; }
