@@ -25,11 +25,11 @@ $(function() {
 	$(window).on("load resize scroll",function() {
 		var preNavbarHeight = $('#pre-navbar').height();
 		var scrollPosition = $(window).scrollTop();
-		// TODO: Body braucht Padding sobald Navi fixed
 		if (scrollPosition > preNavbarHeight) {
 			if ($('#navbar').data('fixed')) return;
 			$('#navbar').data('fixed',true);
 			$('#navbar').addClass('navbar-fixed-top');
+			$('body').css('padding-top',$('#navbar').height());
 			$('#navbar .navbar-header').addClass('show-logo'); // mobile
 			$('#navbar .navbar-collapse').addClass('show-logo'); // desktop
 
@@ -37,6 +37,7 @@ $(function() {
 			if (!$('#navbar').data('fixed')) return;
 			$('#navbar').data('fixed',false);
 			$('#navbar').removeClass('navbar-fixed-top');
+			$('body').css('padding-top',0);
 			$('#navbar .navbar-header').removeClass('show-logo'); // mobile
 			$('#navbar .navbar-collapse').removeClass('show-logo'); // desktop
 		}
