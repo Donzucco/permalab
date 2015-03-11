@@ -38,84 +38,6 @@
 @color-context-default: rgba(255,255,255, 0.4) ;
 @color-neutral-dark: #333;
 
-// Text
-h1 {
-  font-family: PraterSansOne-regular;	
-  font-size: 60px;
-  line-height: 64px;
-  margin: 20px 0 0 0;
-  padding: 0;
-}
-h2 {
-  font-family: PraterSansOne-regular;	
-  font-size: 40px;
-  margin: 20px 0 0 0;
-  padding: 0;
-  line-height: 44px;
-}
-h3 {
-  font-family: PraterSansOne-regular;	
-  font-size: 30px;
-  line-height: 34px; 
-  margin: 20px 0 15px 0;
-}
-h4  {
-  font-family: PraterSansOne-regular;		
-  font-size: 24px;
-  margin: 20px 0 0px 0;
-  padding: 0;
-  line-height: 28px;
-}
-h5  {
-  font-family: PraterBlockOne-Fill;		
-  font-size: 25px;
-  margin: 10px 0 20px 0;
-  padding: 0;
-  line-height: 30px;
-}
-p {
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 16px;
-  line-height: 24px; 
-  margin: 0px 0 0px 0;
-}
-p small,
-h1 small,
-h2 small,
-h3 small,
-h4 small,
-h5 small,
-h6 small,
-.p small,
-.h1 small,
-.h2 small,
-.h3 small,
-.h4 small,
-.h5 small,
-.h6 small,
-p .small,
-h1 .small,
-h2 .small,
-h3 .small,
-h4 .small,
-h5 .small,
-h6 .small,
-.p .small,
-.h1 .small,
-.h2 .small,
-.h3 .small,
-.h4 .small,
-.h5 .small,
-.h6 .small{
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 12px;
-  color: #333;
-  opacity: none;
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
-  line-height: 20px;
-  font-weight: 20px;
-}
 
 
 html {
@@ -126,6 +48,14 @@ body {
 	min-height: 100%;
 	background-image: url("../images/natural_paper.png");
 }
+
+
+#bodywrapper {
+	background-image: url("../images/map-01.svg");
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
 .dotline{
     border-top-color: #1d1d1b;
     border-top-radius: 0;
@@ -495,6 +425,110 @@ a.list-group-item {
     vertical-align: baseline;
     white-space: nowrap;
 }
+
+
+
+
+.img-thumbnail {
+	border: 1px dashed @color-neutral-dark;
+	border-radius: 0;
+}
+a .img-thumbnail {
+	opacity: 0.7;
+
+	&:hover {
+		opacity: 1;
+	}
+}
+
+.img-thumbnail-circle {
+	border-radius: 50%;
+}
+
+
+
+
+
+// Text
+h1 {
+  font-family: PraterSansOne-regular;	
+  font-size: 60px;
+  line-height: 64px;
+  margin: 20px 0 0 0;
+  padding: 0;
+}
+h2 {
+  font-family: PraterSansOne-regular;	
+  font-size: 40px;
+  margin: 20px 0 0 0;
+  padding: 0;
+  line-height: 44px;
+}
+h3 {
+  font-family: PraterSansOne-regular;	
+  font-size: 30px;
+  line-height: 34px; 
+  margin: 20px 0 15px 0;
+}
+h4  {
+  font-family: PraterSansOne-regular;		
+  font-size: 24px;
+  margin: 20px 0 0px 0;
+  padding: 0;
+  line-height: 28px;
+}
+h5  {
+  font-family: PraterBlockOne-Fill;		
+  font-size: 25px;
+  margin: 10px 0 20px 0;
+  padding: 0;
+  line-height: 30px;
+}
+p {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  line-height: 24px; 
+  margin: 0px 0 0px 0;
+}
+p small,
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small,
+.p small,
+.h1 small,
+.h2 small,
+.h3 small,
+.h4 small,
+.h5 small,
+.h6 small,
+p .small,
+h1 .small,
+h2 .small,
+h3 .small,
+h4 .small,
+h5 .small,
+h6 .small,
+.p .small,
+.h1 .small,
+.h2 .small,
+.h3 .small,
+.h4 .small,
+.h5 .small,
+.h6 .small{
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 12px;
+  color: #333;
+  opacity: none;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  line-height: 20px;
+  font-weight: 20px;
+}
+
+
 // Modifiers for Skin
 
 .top5 { margin-top:5px !important; }
