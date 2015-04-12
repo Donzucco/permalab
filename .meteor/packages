@@ -8,4 +8,18 @@ meteor-platform
 autopublish
 insecure
 
+coffeescript
 less
+
+service-configuration
+accounts-base
+useraccounts:unstyled
+accounts-password
+accounts-facebook
+
+# routing
+meteorhacks:flow-router
+meteorhacks:flow-layout
+meteorhacks:fast-render
+
+arillo:flow-router-helpers

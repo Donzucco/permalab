@@ -1,13 +1,22 @@
 # Permalab
 
 
-How to setup
+Project auschecken:
 
-install meteor
+    git clone -b meteor https://github.com/Donzucco/permalab.git
+
+
+Meteor installieren
 
     curl https://install.meteor.com/ | sh
 
-run meteor in project folder
+Im Projekt Ordner:
 
     meteor
-    
+
+
+Struktur:
+
+Templates liegen unter client/templates/
+
+CSS liegt unter client/css/
