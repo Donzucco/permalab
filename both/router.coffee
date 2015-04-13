@@ -23,3 +23,7 @@ FlowRouter.route '/service',
 FlowRouter.route '/solutions',
     action: (params) ->
         FlowLayout.render('MasterLayout', { main:'Solutions'})
+
+FlowRouter.route '/user',
+    action: (params) ->
+        FlowLayout.render('MasterLayout', { main:'User'})
