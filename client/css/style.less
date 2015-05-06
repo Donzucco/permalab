@@ -31,12 +31,13 @@
 	font-style: normal;
 }
 // Colors
-@color-context-intention: #679b74;
+@color-context-intention: #66a69c;
 @color-context-collective: #66a69c;
 @color-context-manifest: #e87952;
-@color-context-services: #ccbd2e;
+@color-context-services: #679b74;
 @color-context-default: rgba(255,255,255, 0.4) ;
 @color-neutral-dark: #333;
+
 
 
 
@@ -51,7 +52,7 @@ body {
 
 
 #bodywrapper {
-	background-image: url("../images/map-01.svg");
+	background-image: url("../images/map.svg");
 	background-size: cover;
 	background-position: 50% 50%;
 }
@@ -288,6 +289,19 @@ transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 .navbar-fixed-top .navbar-collapse {
 	max-height: none;
 }
+// Normal Box
+.normalbox {
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 0px solid transparent;
+    display: block;
+    margin-bottom: 4px;
+    border-radius: 3px;
+    padding: 3px 26px 30px;
+    position: relative;
+    text-align: center;
+}
+
+
 // Active Box
 .activebox.active, .activebox:hover ,activebox:focus {
     background-color: @color-context-intention;
@@ -305,7 +319,6 @@ a.activebox{
     margin-bottom: 4px;
     border-radius: 3px;
     padding: 3px 26px 30px;
-    position: relative;
     text-align: center;
 }
 
