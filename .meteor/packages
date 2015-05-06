@@ -23,3 +23,7 @@ meteorhacks:flow-layout
 meteorhacks:fast-render
 
 arillo:flow-router-helpers
+
+
+cfs:standard-packages
+cfs:gridfs
