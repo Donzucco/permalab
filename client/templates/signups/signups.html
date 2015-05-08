@@ -1,0 +1,10 @@
+<template name="Signups">
+    <div class="container">
+        <h2>This people already joined, do you want to be the next one?</h2>
+        {{#if currentUser}}
+            Hello {{currentUser._id}}, <a href="{{pathFor '/profile'}}">edit your profile</a>
+        {{else}}
+            <a href="{{pathFor '/signup'}}">Sign up</a>
+        {{/if}}
+    </div>
+</template>
