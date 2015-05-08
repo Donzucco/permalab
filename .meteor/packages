@@ -5,7 +5,6 @@
 # but you can also edit it by hand.
 
 meteor-platform
-autopublish
 insecure
 
 coffeescript
@@ -25,5 +24,8 @@ meteorhacks:fast-render
 arillo:flow-router-helpers
 
 
+# IMAGES
 cfs:standard-packages
 cfs:gridfs
+cfs:ejson-file
+cfs:graphicsmagick

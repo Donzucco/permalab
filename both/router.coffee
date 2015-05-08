@@ -14,6 +14,12 @@ FlowRouter.route '/profile',
     action: (params) ->
         FlowLayout.render('MasterLayout', { main:'Profile'})
 
+# Logout
+FlowRouter.route '/logout',
+    action: (params) ->
+        Meteor.logout()
+        FlowRouter.go('/')
+
 ###
 FlowRouter.route '/intention',
     action: (params) ->

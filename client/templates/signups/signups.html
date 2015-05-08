@@ -2,9 +2,20 @@
     <div class="container">
         <h2>This people already joined, do you want to be the next one?</h2>
         {{#if currentUser}}
-            Hello {{currentUser._id}}, <a href="{{pathFor '/profile'}}">edit your profile</a>
+            Hello {{currentUser._id}}, <a href="{{pathFor '/profile'}}">edit your profile</a> <a href="{{pathFor '/logout'}}">logout</a>
         {{else}}
-            <a href="{{pathFor '/signup'}}">Sign up</a>
+            <a href="{{pathFor '/signup'}}">Sign up</a>, already have an account? <a href="{{pathFor '/login'}}">login</a>
         {{/if}}
+
+        <ul>
+        {{#each users}}
+            <li>
+                {{#with getAvatar this}}
+                    <img src="{{url store='large'}}">
+                {{/with}}
+                {{profile.displayname}}
+            </li>
+        {{/each}}
+        </ul>
     </div>
 </template>
