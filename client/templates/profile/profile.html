@@ -1,0 +1,13 @@
+<template name="Profile">
+    <div class="container">
+        <h2>Profile</h2>
+        {{#with getAvatar currentUser}}
+            {{#if isUploaded}}
+                <img src="{{url store='large'}}">
+            {{else}}
+                {{uploadProgress}}%
+            {{/if}}
+        {{/with}}
+        <input type="file" name="profilePicture" class="avatar_upload js-profilePictureInput">
+    </div>
+</template>

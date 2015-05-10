@@ -6,6 +6,23 @@ FlowRouter.notfound =
 # Home
 FlowRouter.route '/',
     action: (params) ->
+        FlowLayout.render('MasterLayout', { main:'Signups'})
+
+# Profile
+FlowRouter.route '/profile',
+    middlewares: [AccountsTemplates.ensureSignedIn]
+    action: (params) ->
+        FlowLayout.render('MasterLayout', { main:'Profile'})
+
+# Logout
+FlowRouter.route '/logout',
+    action: (params) ->
+        Meteor.logout()
+        FlowRouter.go('/')
+
+###
+FlowRouter.route '/intention',
+    action: (params) ->
         FlowLayout.render('MasterLayout', { main:'Intention'})
 
 FlowRouter.route '/collective',
@@ -27,3 +44,4 @@ FlowRouter.route '/solutions',
 FlowRouter.route '/user',
     action: (params) ->
         FlowLayout.render('MasterLayout', { main:'User'})
+###
