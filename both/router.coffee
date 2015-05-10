@@ -6,13 +6,18 @@ FlowRouter.notfound =
 # Home
 FlowRouter.route '/',
     action: (params) ->
-        FlowLayout.render('MasterLayout', { main:'Signups'})
+        FlowLayout.render('MasterLayout', { main:'Home'})
 
 # Profile
 FlowRouter.route '/profile',
     middlewares: [AccountsTemplates.ensureSignedIn]
     action: (params) ->
         FlowLayout.render('MasterLayout', { main:'Profile'})
+
+# Profile
+FlowRouter.route '/login2',
+    action: (params) ->
+        FlowLayout.render('MasterLayout', { main:'Login2'})
 
 # Logout
 FlowRouter.route '/logout',
