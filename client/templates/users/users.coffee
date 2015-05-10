@@ -1,3 +1,3 @@
-Template.Signups.helpers
+Template.Users.helpers
     users: () ->
         Users.find()

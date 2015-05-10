@@ -28,6 +28,25 @@ AccountsTemplates.configure
   hideSignInLink: true
   hideSignUpLink: true
 
+  texts:
+    button:
+      signUp: "Register"
+      changePwd: "Change password"
+      signIn: "Login"
+      # enrollAccount: "Enroll Text",
+      # forgotPwd: "Forgot Pwd Text",
+      # resetPwd: "Reset Pwd Text",
+
+    title:
+      forgotPwd: ""
+      changePwd: ""
+      enrollAccount: ""
+      forgotPwd: ""
+      resetPwd: ""
+      signUp: "Join the movement"
+      signIn: "Login"
+  
+
 AccountsTemplates.configureRoute 'signUp',
     name: 'signup'
     path: '/signup'
