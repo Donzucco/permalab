@@ -14,11 +14,6 @@ FlowRouter.route '/profile',
     action: (params) ->
         FlowLayout.render('MasterLayout', { main:'Profile'})
 
-# Profile
-FlowRouter.route '/login2',
-    action: (params) ->
-        FlowLayout.render('MasterLayout', { main:'Login2'})
-
 # Logout
 FlowRouter.route '/logout',
     action: (params) ->
