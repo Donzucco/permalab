@@ -33,14 +33,6 @@
 							<p class="">
 								join the plattform and feel free to meet us in real life!
 							</p >
-							{{#if currentUser}}
-								<a href="{{pathFor '/profile'}}">Edit your profile</a> or <a href="{{pathFor '/logout'}}">logout</a>
-							{{else}}
-								{{> atForm state="signUp"}}
-								or
-								{{> atForm state="signIn"}}
-							{{/if}}
-
 							{{!--
 							<a href="#" class="btn btn-primary btn-lg">Login</a><small>- or -</small><a href="#" class="btn btn-primary btn-lg">Signup</a>
 							<div>
@@ -58,9 +50,30 @@
 
 		</div>
 	</div>
-	
 	<div class="dotline"></div>
-	
+	    <div class="container top30 bottom70">
+	    {{#if currentUser}}	
+		    <div class="col-sm-6">
+	            <div class="normalbox">
+								<a href="{{pathFor '/profile'}}">Edit your profile</a> or <a href="{{pathFor '/logout'}}">logout</a>
+            	</div> 
+            </div>
+		{{else}}
+        	<div class="col-sm-6">
+	            <div class="normalbox">
+			{{> atForm state="signUp"}}
+            	</div> 
+            </div> 
+        	<div class="col-sm-6">
+	            <div class="normalbox">
+			{{> atForm state="signIn"}}
+            	</div> 
+            </div>             
+        {{/if}}       
+        </div>     	
+	<div class="dotline"></div>
+
+
 	{{> Users}}
 
 	<div class="dotline top30"></div>
