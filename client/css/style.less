@@ -83,13 +83,16 @@ body {
 	background-image: url("../images/natural_paper.png");
 }
 // Form 
-.at-title
-{
-  font-family: PraterSansOne-regular;	
-  font-size: 40px;
-  margin: 20px 0 0 0;
-  padding: 0;
-  line-height: 44px;
+.at-title h3{
+font-size: 40px;
+}
+
+input {
+  padding:3px;
+  margin:3px;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 
@@ -300,14 +303,18 @@ transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
 // Normal Box
 .normalbox {
-    background-color: rgba(255, 255, 255, 0.4);
-    border: 0px solid transparent;
+	background-image: url("../images/natural_paper.png");
+    background-color: @color-context-collective;
     display: block;
     margin-bottom: 4px;
-    border-radius: 3px;
     padding: 3px 26px 30px;
     position: relative;
     text-align: center;
+    border-color: #1d1d1b;
+    border-radius: 0;
+    border-style: dashed;
+    border-width: 1px;
+    padding:0px 0px 0px 0px;
 }
 
 
@@ -404,6 +411,37 @@ a.list-group-item {
 }
 
 // Buttons
+.at-btn
+{
+	color: #FFF;
+    background-color: #333;
+    border-color: #333;
+    padding: 8px 14px;
+    font-size: 16px;
+    line-height: 1.33;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+        border-bottom-left-radius: 6px;
+}
+.at-social-btn
+{
+	color: #FFF;
+    background-color: #333;
+    padding: 6px 12px;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
 .btn-primary {
     color: #FFF;
     background-color: #333;

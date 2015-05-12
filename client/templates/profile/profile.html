@@ -1,10 +1,11 @@
 <template name="Profile">
     <div class="container">
-
+      <div class="col-sm-4"></div>
+      <div class="text-center col-sm-4">
         <h2>{{currentUser.profile.displayname}}'s profile</h2>
         {{#with getAvatar currentUser}}
             {{#if isUploaded}}
-                <img src="{{url store='large'}}">
+                <img class="bottom10 top15 img-thumbnail" src="{{url store='large'}}">
             {{else}}
                 {{uploadProgress}}%
             {{/if}}
@@ -25,9 +26,12 @@
               <input type="checkbox"> I confirm it is ok to show my picture online
             </label>
           </div>
-          <button type="submit" class="btn btn-default">Submit</button>
+          <button type="submit" class="btn btn-primary btn-lg">Submit</button>
         </form>
-
-        <a href="/">go back to the main site</a>
-    </div>
+      </div> 
+      </div>
+      <div class="dotline"></div>
+        <div class="bottom10 top10 text-center">
+           <a href="/">go back to the main site</a>
+      </div>
 </template>

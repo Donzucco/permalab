@@ -2,18 +2,16 @@
 	<!-- Network collective -->
 	<div class="context-collective">		
 		<div class="container">
-
 			<div class="row top17 bottom30">
 				<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
 					<h1 class="text-center top30">
-						We are gathering people that want to start communities in Portugal.
+						We want to facilitate pioneers work in portugal!
 					</h1>
 					<h5 class="text-center top20">
 						This plattform wants to build long term a cooperation network, facilitate communication and coordinate gatherings.
 					</h5>
 				</div>
 			</div>
-
 			<!-- row -->
 			<div>
 				<!-- Page illustration -->	
@@ -27,7 +25,7 @@
 						
 						<div class="col-sm-6">
 							<p class="">
-	                               Permalab is an initiative focused on creating and supporting communities in Portugal. By traveling through different projects and communities we meet a lot of people willing to create new projects. This platform wants to bring this people together.This page wants to support the unification of forces of pioneers that already decided that it is time to create resilient, extraordinary, communitarian life perspectives.
+	                               Permalab is an initiative focused on creating and supporting communities in Portugal. By traveling through different projects and communities we meet a lot of people willing to create new projects. This platform wants to support and bring this people together .Lets ampower pioneers that already decided that it is time to create resilient, extraordinary, communitarian life perspectives.
 							</p>
 							<h4>If you want be part of it</h4>
 							<p class="">
@@ -49,13 +47,18 @@
 			</div>
 
 		</div>
-	</div>
+	</div>   	
 	<div class="dotline"></div>
-	    <div class="container top30 bottom70">
+	{{> Users}}
+	<div class="dotline"></div>
+	    <div class="container top30 bottom30">
 	    {{#if currentUser}}	
-		    <div class="col-sm-6">
+	    	<div class="col-sm-4"></div>
+		    <div class="col-sm-4">
 	            <div class="normalbox">
-								<a href="{{pathFor '/profile'}}">Edit your profile</a> or <a href="{{pathFor '/logout'}}">logout</a>
+					<a href="{{pathFor '/profile'}}">Edit your profile</a> 
+					or 
+					<a href="{{pathFor '/logout'}}">logout</a>
             	</div> 
             </div>
 		{{else}}
@@ -70,20 +73,15 @@
             	</div> 
             </div>             
         {{/if}}       
-        </div>     	
+        </div>  
 	<div class="dotline"></div>
-
-
-	{{> Users}}
-
-	<div class="dotline top30"></div>
-
-	<div class="container ">		
+	<div class="context-collective">
+	<div class="container">		
 		<div class="bs-docs-section">
 			<div class="row">
 				<div class="col-3"></div>
 				<div class="col-6">
-					<div class="well bs-component">
+					<div class="top30 bottom70">
 						<h2 class="text-center">
 							Leave a feedback	
 						</h2>
@@ -95,6 +93,7 @@
 				<div class="col-3"></div>
 			</div>
 		</div>
+	</div>
 	</div>
 	
 	<div class="dotline"></div>	
