@@ -53,12 +53,10 @@
 	<div class="dotline"></div>
 	    <div class="container top30 bottom30">
 	    {{#if currentUser}}	
-	    	<div class="col-sm-4"></div>
-		    <div class="col-sm-4">
-	            <div class="normalbox">
-					<a href="{{pathFor '/profile'}}">Edit your profile</a> 
-					or 
-					<a href="{{pathFor '/logout'}}">logout</a>
+	    	<div class="col-12">
+	    		<div class="normalbox">
+	    			<a href="{{pathFor '/profile'}}" class="btn btn-primary btn-lg">Edit your profile</a> 
+					<a href="{{pathFor '/logout'}}" class="btn btn-primary btn-lg">logout</a>
             	</div> 
             </div>
 		{{else}}

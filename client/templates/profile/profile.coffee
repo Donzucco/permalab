@@ -13,3 +13,12 @@ Template.Profile.events
         e.preventDefault()
         newFile = new FS.File(e.target.files[0])
         uploadPicture(newFile)
+
+    'submit #editProfile': (e,tmpl) ->
+        e.preventDefault()
+        title = $('#displayName').val()
+        
+        Users.update Meteor.userId(), $set:
+            'profile.displayname': title
+        
+        FlowRouter.go '/'
