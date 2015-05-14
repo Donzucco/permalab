@@ -1,3 +1,9 @@
+mySubmitFunc = (error, state) ->
+  # console.warn error, state
+  if !error
+    if state == 'signIn'
+      FlowRouter.go('/profile')
+
 AccountsTemplates.configure
   defaultLayout: 'MasterLayout'
   defaultLayoutRegions:
@@ -14,11 +20,11 @@ AccountsTemplates.configure
   # Appearance
   showAddRemoveServices: false
   showForgotPasswordLink: false
-  showLabels: true
-  showPlaceholders: false
+  showLabels: false
+  showPlaceholders: true
 
   # Client-side Validation
-  continuousValidation: true
+  continuousValidation: false
   negativeFeedback: false
   negativeValidation: true
   positiveValidation: true
@@ -27,6 +33,8 @@ AccountsTemplates.configure
 
   hideSignInLink: true
   hideSignUpLink: true
+  
+  onSubmitHook: mySubmitFunc
 
   texts:
     button:

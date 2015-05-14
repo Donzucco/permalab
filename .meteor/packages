@@ -12,9 +12,9 @@ less
 
 service-configuration
 accounts-base
-useraccounts:unstyled
+useraccounts:bootstrap
 accounts-password
-accounts-facebook
+# accounts-facebook
 
 # routing
 meteorhacks:flow-router
