@@ -1,0 +1,46 @@
+<template name="Profile">
+
+    <div class="container">
+      <div class="col-sm-4"></div>
+      <div class="text-center col-sm-4">
+
+        <h2>{{currentUser.profile.displayname}}'s profile</h2>
+        {{#with getAvatar currentUser}}
+            {{#if isUploaded}}
+                <img class="bottom10 top15 img-thumbnail" src="{{url store='large'}}">
+            {{else}}
+                {{uploadProgress}}%
+            {{/if}}
+        {{/with}}
+
+        <form id="editProfile" class="" action="action">
+          <div class="form-group">
+            <label for="profilePicture">Picture upload</label>
+            <input type="file" id="profilePicture" class="js-profilePictureInput">
+            {{!--
+              <p class="help-block">This picture will be shown on the page</p>
+            --}}
+          </div>
+          <div class="form-group">
+            <label for="displayName">Display name</label>
+            <input type="text" class="form-control" id="displayName" placeholder="Enter display name" value="{{currentUser.profile.displayname}}">
+          </div>
+          {{!-- 
+          <div class="checkbox">
+            <label>
+              <input type="checkbox"> I confirm it is ok to show my picture online
+            </label>
+          </div>
+          --}}
+          <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+        </form>
+      </div> 
+      </div>
+      
+      <div class="dotline"></div>
+
+      <div class="bottom10 top10 text-center">
+         <a href="/">go back to the main site</a>
+      </div>
+
+</template>

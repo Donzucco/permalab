@@ -1,0 +1,281 @@
+<template name="LoginOld">
+<!-- Network collective -->
+<div class="context-collective">		
+	<div class="container">
+		<div class="row top17 bottom30">
+			<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+				<h1 class="text-center top30">
+					Express your interest by connecting with us!
+				</h1>
+				<h5 class="text-center top20">
+						This plattform wants to build on long term a cooperation network and facilitate communication.	
+				</h5>
+			</div>
+		</div>
+		<!-- row -->
+		<div>
+			<!-- Page illustration -->	
+			<div class="top30 bottom30">
+				<div class="row">
+					<div class="col-sm-4">
+						<img src="images/user.svg" class="w100 img-responsive">
+						<h3 class="top30">
+							Supporter
+						</h3>
+						<p class="">
+							You are welcome to support us in any way. As a guest, as a financial supporter or 
+						</p>
+										<div class="checkbox">
+											<label>
+											<input type="checkbox"> Support the experiment!
+											</label>
+										</div>						
+					</div>
+					<div class="col-sm-4">
+						<img src="images/user.svg" class="w100 img-responsive">
+						<h3 class="top30">
+							Lab facilitator
+						</h3>
+						<p class="">
+							You are responsable to codesign, organize and finance the lab with our support.
+							You contribute in developing & organizing the infrastructure that you need.
+							You are facilitating the lab with a minimum of 3 people.
+						</p>
+										<div class="checkbox">
+											<label>
+											<input type="checkbox"> Facilitate global change!
+											</label>
+										</div>							
+					</div>
+					<div class="col-sm-4">
+						<img src="images/user.svg" class="w100 img-responsive">
+						<h3 class="top30">
+							Model facilitator
+						</h3>
+						<p class="">
+							You live on the land for atleast 8 Month in the year
+							You live on the land 
+						</p>
+										<div class="checkbox">
+											<label>
+											<input type="checkbox"> Create a new model!
+											</label>
+										</div>							
+					</div>										
+				</div>
+				<!-- row -->
+			</div>
+			<!-- row -->
+			</div>		
+		</div>
+		</div>
+			<div class="dotline">
+	</div>
+	<div class="container top30 bottom30">
+			<!-- Content Blocs-->
+	<div class="col-sm-6">
+		<a class="activebox" href="#">
+   			<h2 class="bottom10">
+				Attitude & Principles
+		    </h2>
+    		<p class="">
+We are aware that our inner landscape is designing our outer landscape. 
+We want to find the right questions to be able to focus on the right solutions.
+Here we want to design and use tools to get to the bottom of conflict resolution, trust building, contact and awarness in relationschips and nature. 
+</p>
+		</a>
+	</div>
+	<div class="col-sm-6">
+		<a class="activebox" href="#">
+   			<h2 class="bottom10">
+				Gif economy & Support	
+		    </h2>
+    		<p class="">
+			 Startig by creating it around children we want to cocreate with nature a sustainable ecosystem and infrastructure that inhance community and the use of our collective intelligence. Stepping out of ownership and the story of separation we want to focus on making visible what connect us and in wich way we can integrate the gifts that life and the planet is providing to us.
+			</p>
+		</a>
+	</div>	
+	</div>
+	<div class="container">
+			<!-- Forms
+			================================================== -->
+		<div class="bs-docs-section">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="well bs-component">
+
+						{{> atForm state="signIn"}}
+						<form class="form-horizontal">
+							<fieldset>
+								<div  class=" bottom30"><small>Privat information (only log in user can see it)</small></div>
+								<div class="form-group">
+									<label for="inputEmail" class="col-lg-3 control-label">Email</label>
+									<div class="col-lg-9">
+										<input type="text" class="form-control" id="inputEmail" placeholder="Email">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="inputPassword" class="col-lg-3 control-label">Password</label>
+									<div class="col-lg-9">
+										<input type="password" class="form-control" id="inputPassword" placeholder="Password">
+										<div class="checkbox">
+											<label>
+											<input type="checkbox"> I read and subscribe the manifest!
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="textArea" class="col-lg-3 control-label">Message</label>
+									<div class="col-lg-9">
+										<textarea class="form-control" rows="3" id="textArea"></textarea>
+										<span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+									</div>
+								</div>	
+																	<label for="textArea" class="col-lg-2 control-label">Location</label>			
+							</fieldset>
+						</form>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="well bs-component">
+						<form class="form-horizontal">
+							<fieldset>
+								<div  class=" bottom30"><small>Public Informations</small></div>
+								<div class="form-group">
+									<label for="textArea" class="col-lg-3 control-label">Username</label>
+									<div class="col-lg-9">
+										<input type="text" class="form-control" id="inputUsername" placeholder="Username">
+									</div>
+								</div>
+								<label for="textArea" class="col-lg-3 control-label">You come</label>
+								<div class="col-lg-9 bottom10">
+										<div class="checkbox">
+											<label>
+											<input type="checkbox"> With yourself
+											</label>
+										</div>
+										<div class="checkbox">
+											<label>
+											<input type="checkbox"> With a partner
+											</label>
+										</div>	
+										<div class="checkbox">
+											<label>
+											<input type="checkbox"> With a group
+											</label>
+										</div>	
+										<div class="checkbox">
+											<label>
+											<input type="checkbox"> With children
+											</label>
+										</div>
+								</div>																																	
+								<div class="form-group">
+									<label for="select" class="col-lg-3 control-label">Activ in:</label>
+									<div class="col-lg-9">
+										<select class="form-control" id="select">
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+										</select>
+										<br>
+										<select multiple="" class="form-control">
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+										</select>
+									</div>
+								</div>		
+								<div class="form-group top30">
+									<label for="select" class="col-lg-3 control-label">What are your gifts?</label>
+									<div class="col-lg-9">
+										<select class="form-control" id="select">
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+										</select>
+										<br>
+										<select multiple="" class="form-control">
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+										</select>
+									</div>
+								</div>	
+								<div class="dotline top30">
+								</div>									
+								<div class="form-group">
+									<div class="col-lg-10 col-lg-offset-2 top30">
+										<button class="btn btn-default">Cancel</button>
+										<button type="submit" class="btn btn-primary">Submit</button>
+									</div>
+								</div>																					
+							</fieldset>
+						</form>
+					</div>
+			</div>
+						</div>
+		</div>	
+		</div>								
+	<div class="dotline top30">
+	</div>
+		<!-- Forms ================================================== -->
+	<div class="container ">		
+		<div class="bs-docs-section">
+			<div class="row">
+			<div class="col-sm-3">
+			</div>
+				<div class="col-lg-6">
+					<div class="well bs-component">
+						<form class="form-horizontal">
+							<fieldset>
+								<h2 class="text-center">
+									Live a feedback	
+								</h2>
+								<p class="text-center bottom30 top10">
+									We want to establish a strong feedback culture, that supports the exchange of knowledge and the optimization of a working process through truthful response.
+Therefore we invite you to leave a message, a thought, a question,  an idea or anything that moves you.		
+								</p>
+								<div class="form-group">
+									<div>
+										<input type="text" class="form-control" id="inputEmail" placeholder="Email">
+									</div>
+								</div>
+								<div class="form-group">
+									<div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div>
+										<textarea class="form-control" rows="3" id="textArea"></textarea>
+										<span class="help-block text-center">Please do the work to express your feedback in a constructive way</span>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="">
+										<button class="btn btn-default">Cancel</button>
+										<button type="submit" class="btn btn-primary">Submit</button>
+									</div>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+				<div class="col-sm-3">
+			</div>
+			</div>
+		</div>
+	</div>
+	<div class="dotline">
+	</div>	
+
+</template>
