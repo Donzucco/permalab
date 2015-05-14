@@ -1,10 +1,10 @@
 <template name="Profile">
-
+  <div class="context-collective">
     <div class="container">
-      <div class="col-sm-4"></div>
-      <div class="text-center col-sm-4">
-
-        <h2>{{currentUser.profile.displayname}}'s profile</h2>
+        <div class="text-center">
+        <h2>{{currentUser.profile.displayname}}'s profile</h2>  
+        </div>    
+      <div class="col-sm-3 bottom30">
         {{#with getAvatar currentUser}}
             {{#if isUploaded}}
                 <img class="bottom10 top15 img-thumbnail" src="{{url store='large'}}">
@@ -15,14 +15,14 @@
 
         <form id="editProfile" class="" action="action">
           <div class="form-group">
-            <label for="profilePicture">Picture upload</label>
+            <label for="profilePicture"><h3>Picture upload</h3></label>
             <input type="file" id="profilePicture" class="js-profilePictureInput">
             {{!--
               <p class="help-block">This picture will be shown on the page</p>
             --}}
           </div>
           <div class="form-group">
-            <label for="displayName">Display name</label>
+            <label for="displayName"><h3>Display name</h3></label>
             <input type="text" class="form-control" id="displayName" placeholder="Enter display name" value="{{currentUser.profile.displayname}}">
           </div>
           {{!-- 
@@ -36,11 +36,11 @@
         </form>
       </div> 
       </div>
-      
+      </div>
       <div class="dotline"></div>
 
       <div class="bottom10 top10 text-center">
-         <a href="/">go back to the main site</a>
+         <a href="/"><h4>go back to the main site</h4></a>
       </div>
 
 </template>
