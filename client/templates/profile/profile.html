@@ -1,10 +1,11 @@
 <template name="Profile">
   <div class="context-collective">
-    <div class="container">
-        <div class="text-center">
+    <form id="editProfile" class="" action="action">  
+    <div class="container bottom70">
+        <div class="text-center bottom30">
         <h2>{{currentUser.profile.displayname}}'s profile</h2>  
         </div>    
-      <div class="col-sm-3 bottom30">
+      <div class="col-sm-2 bottom30">
         {{#with getAvatar currentUser}}
             {{#if isUploaded}}
                 <img class="bottom10 top15 img-thumbnail" src="{{url store='large'}}">
@@ -12,30 +13,65 @@
                 {{uploadProgress}}%
             {{/if}}
         {{/with}}
-
-        <form id="editProfile" class="" action="action">
+      </div> 
+      <div class="col-sm-3">
           <div class="form-group">
-            <label for="profilePicture"><h3>Picture upload</h3></label>
+            <label for="displayName"><h4>Name</h4></label>
+            <input type="text" class="form-control" id="displayName" placeholder="Enter display name" value="{{currentUser.profile.displayname}}">
+          </div>
+          <div class="form-group">
+            <label for="profilePicture"><h4>Picture upload</h4></label>
             <input type="file" id="profilePicture" class="js-profilePictureInput">
             {{!--
               <p class="help-block">This picture will be shown on the page</p>
             --}}
-          </div>
-          <div class="form-group">
-            <label for="displayName"><h3>Display name</h3></label>
-            <input type="text" class="form-control" id="displayName" placeholder="Enter display name" value="{{currentUser.profile.displayname}}">
-          </div>
-          {{!-- 
+          </div>        
+      </div>
+      <div class="col-sm-1"></div>
+      <div class="col-sm-6">
+        <h4>Intention</h4>
           <div class="checkbox">
             <label>
-              <input type="checkbox"> I confirm it is ok to show my picture online
+              <input type="checkbox"> <p>I´m already living in a Project</p>
             </label>
-          </div>
-          --}}
-          <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-        </form>
-      </div> 
+          </div> 
+          <div class="checkbox">
+            <label>
+              <input type="checkbox"> <p>Want to Join a Project</p>
+            </label>
+          </div>  
+          <div class="checkbox">
+            <label>
+              <input type="checkbox"> <p>Want to Join a Project</p>
+            </label>
+          </div>  
+          <div class="checkbox">
+            <label>
+              <input type="checkbox"> <p>Want to support a Project</p>
+            </label>
+          </div> 
+          <div class="checkbox">
+            <label>
+              <input type="checkbox"> <p>Want to start a own Project</p>
+            </label>
+          </div>              
+        <h4>As a</h4>
+        <p>- Individual</p>
+        <p>- Couple</p>
+        <p>- Family (with children)</p>
+        <p>- Group</p>
       </div>
+      </div>
+      <div class="dotline"></div>
+        <div class="text-center">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox"> I confirm it is ok to show my picture and name online
+            </label>
+          </div> 
+          <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+         </div> 
+      </form>
       </div>
       <div class="dotline"></div>
 
