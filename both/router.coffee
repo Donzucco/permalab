@@ -20,7 +20,7 @@ FlowRouter.route '/logout',
         Meteor.logout()
         FlowRouter.go('/')
 
-###
+
 FlowRouter.route '/intention',
     action: (params) ->
         FlowLayout.render('MasterLayout', { main:'Intention'})
@@ -44,4 +44,3 @@ FlowRouter.route '/solutions',
 FlowRouter.route '/user',
     action: (params) ->
         FlowLayout.render('MasterLayout', { main:'User'})
-###
