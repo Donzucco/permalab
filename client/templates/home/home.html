@@ -32,7 +32,9 @@
 								join the plattform and share it with your followers!
 							</p >
 							{{#unless currentUser}}
-								<a href="#LoginSignup" class="btn btn-primary btn-lg">Login</a><small>- or -</small><a href="#LoginSignup" class="btn btn-primary btn-lg">Signup</a>
+								<a href="#LoginSignup" class="btn btn-primary btn-lg">Login</a><small> - or - </small><a href="#LoginSignup" class="btn btn-primary btn-lg">Signup</a>
+							{{else}}
+								<a href="{{pathFor '/profile'}}" class="btn btn-primary btn-lg">Edit your profile</a><small> - or - </small><a href="{{pathFor '/logout'}}" class="btn btn-primary btn-lg">logout</a>
 							{{/unless}}
 							{{!--
 							<div>
@@ -54,14 +56,15 @@
 	{{> Users}}
 	<div class="dotline"></div>
 	    <div id="LoginSignup" class="container top30 bottom30">
-		    {{#if currentUser}}
-		    	<div class="col-12">
-		    		<div class="normalbox">
-		    			<a href="{{pathFor '/profile'}}" class="btn btn-primary btn-lg">Edit your profile</a> 
-						<a href="{{pathFor '/logout'}}" class="btn btn-primary btn-lg">logout</a>
-	            	</div> 
-	            </div>
-			{{else}}
+	    	{{!-- 
+	    	<div class="col-12">
+	    		<div class="normalbox">
+	    			<a href="{{pathFor '/profile'}}" class="btn btn-primary btn-lg">Edit your profile</a> 
+					<a href="{{pathFor '/logout'}}" class="btn btn-primary btn-lg">logout</a>
+            	</div> 
+            </div>
+	    	--}}
+		    {{#unless currentUser}}
 	        	<div class="col-lg-6">
 		            <div class="formbox">
 						{{> atForm state="signUp"}}
@@ -72,7 +75,7 @@
 						{{> atForm state="signIn"}}
 	            	</div> 
 	            </div>             
-	        {{/if}}       
+	        {{/unless}}       
         </div>  
 	<div class="dotline"></div>
 	<div class="context-collective">
