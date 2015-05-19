@@ -3,6 +3,8 @@ mySubmitFunc = (error, state) ->
   if !error
     if state == 'signIn'
       FlowRouter.go('/profile')
+    if state == 'signUp'
+      FlowRouter.go('/profile')
 
 AccountsTemplates.configure
   defaultLayout: 'MasterLayout'
