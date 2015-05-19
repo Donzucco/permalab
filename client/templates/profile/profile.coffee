@@ -8,6 +8,12 @@ uploadPicture = (newFile) ->
         if err
         else
 
+Template.Profile.helpers
+    checkCheckbox: (check) ->
+        user = Meteor.user()
+        return 'checked' if user.profile.status?[check]
+        return ''
+
 Template.Profile.events
     'change .js-profilePictureInput': (e, template) ->
         e.preventDefault()
@@ -17,8 +23,17 @@ Template.Profile.events
     'submit #editProfile': (e,tmpl) ->
         e.preventDefault()
         title = $('#displayName').val()
-        
+
         Users.update Meteor.userId(), $set:
             'profile.displayname': title
-        
+            'profile.status.alreadyLivingInAProject': $('#alreadyLivingInAProject').is(':checked')
+            'profile.status.wantToJoinAProject': $('#wantToJoinAProject').is(':checked')
+            'profile.status.wantToSupportAProject': $('#wantToSupportAProject').is(':checked')
+            'profile.status.wantToStartAProject': $('#wantToStartAProject').is(':checked')
+            'profile.status.individual': $('#individual').is(':checked')
+            'profile.status.couple': $('#couple').is(':checked')
+            'profile.status.parent': $('#parent').is(':checked')
+            'profile.status.group': $('#group').is(':checked')
+
+
         FlowRouter.go '/'

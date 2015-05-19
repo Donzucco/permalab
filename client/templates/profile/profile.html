@@ -32,54 +32,56 @@
         <h4>Intention</h4>
           <div class="checkbox">
             <label>
-              <input type="checkbox"> <p>I´m already living in a Project</p>
+              <input type="checkbox" id="alreadyLivingInAProject" {{checkCheckbox 'alreadyLivingInAProject'}}> <p>I´m already living in a Project</p>
             </label>
           </div> 
           <div class="checkbox">
             <label>
-              <input type="checkbox"> <p>I want to join a Project</p>
+              <input type="checkbox" id="wantToJoinAProject" {{checkCheckbox 'wantToJoinAProject'}}> <p>I want to join a Project</p>
             </label>
           </div>  
           <div class="checkbox">
             <label>
-              <input type="checkbox"> <p>I want to support a Project</p>
+              <input type="checkbox" id="wantToSupportAProject" {{checkCheckbox 'wantToSupportAProject'}}> <p>I want to support a Project</p>
             </label>
           </div> 
           <div class="checkbox">
             <label>
-              <input type="checkbox"> <p>I want to start a new Project</p>
+              <input type="checkbox" id="wantToStartAProject" {{checkCheckbox 'wantToStartAProject'}}> <p>I want to start a new Project</p>
             </label>
           </div>              
         <h4>As</h4>
           <div class="checkbox">
             <label>
-              <input type="checkbox"> <p>Individual</p>
+              <input type="checkbox" id="individual" {{checkCheckbox 'individual'}}> <p>Individual</p>
             </label>
           </div> 
           <div class="checkbox">
             <label>
-              <input type="checkbox"> <p>Couple</p>
+              <input type="checkbox" id="couple" {{checkCheckbox 'couple'}}> <p>Couple</p>
             </label>
           </div> 
           <div class="checkbox">
             <label>
-              <input type="checkbox"> <p> Mother/Father with children</p>
+              <input type="checkbox" id="parent" {{checkCheckbox 'parent'}}> <p> Mother/Father with children</p>
             </label>
           </div> 
           <div class="checkbox">
             <label>
-              <input type="checkbox"> <p>Group</p>
+              <input type="checkbox" id="group" {{checkCheckbox 'group'}}> <p>Group</p>
             </label>
           </div>                               
       </div>
       </div>
       <div class="dotline"></div>
         <div class="text-center">
+          {{!--
           <div class="checkbox">
             <label>
               <input type="checkbox"> I confirm it is ok to show my picture and name online
             </label>
-          </div> 
+          </div>
+          --}}
           <button type="submit" class="btn btn-primary btn-lg">Submit</button>
          </div> 
       </form>
