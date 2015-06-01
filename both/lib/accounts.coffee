@@ -21,7 +21,7 @@ AccountsTemplates.configure
 
   # Appearance
   showAddRemoveServices: false
-  showForgotPasswordLink: false
+  showForgotPasswordLink: true
   showLabels: false
   showPlaceholders: true
 
