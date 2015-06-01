@@ -67,6 +67,11 @@ AccountsTemplates.configureRoute 'signIn',
     path: '/login'
     template: 'Login'
 
+AccountsTemplates.configureRoute 'forgotPwd',
+    name: 'forgotPassword'
+    path: '/forgot-password'
+    template: 'ForgotPassword'
+    
 AccountsTemplates.addField
   _id: 'displayname',
   type: 'text'
