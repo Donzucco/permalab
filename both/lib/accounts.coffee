@@ -71,7 +71,12 @@ AccountsTemplates.configureRoute 'forgotPwd',
     name: 'forgotPassword'
     path: '/forgot-password'
     template: 'ForgotPassword'
-    
+
+AccountsTemplates.configureRoute 'resetPwd',
+    name: 'resetPwd'
+    path: '/reset-password'
+    template: 'ResetPassword'
+
 AccountsTemplates.addField
   _id: 'displayname',
   type: 'text'
