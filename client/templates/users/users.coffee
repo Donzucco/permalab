@@ -1,3 +1,3 @@
-Template.Users.helpers
+Template.UserCards.helpers
     users: () ->
         Users.find()

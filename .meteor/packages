@@ -10,9 +10,11 @@ insecure
 coffeescript
 less
 
+materialize:materialize
+
 service-configuration
 accounts-base
-useraccounts:bootstrap
+useraccounts:materialize
 accounts-password
 # accounts-facebook
 

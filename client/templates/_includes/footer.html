@@ -1,0 +1,22 @@
+<template name="Footer">
+    <footer class="page-footer light-blue darken-3">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Send us your feedback</h5>
+                <p class="grey-text text-lighten-4">We want to establish a strong feedback culture, that supports the exchange of knowledge and the optimization of a working process through truthful response. Therefore we invite you to write us a message, a thought, a question, an idea or anything that moves you. <a href="mailto:&#119;&#101;&#064;&#112;&#101;&#114;&#109;&#097;&#108;&#097;&#098;&#046;&#101;&#117;" target="_blank">&#119;&#101;&#064;&#112;&#101;&#114;&#109;&#097;&#108;&#097;&#098;&#046;&#101;&#117;</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+              © 2015 Permalab
+              {{#unless currentUser}}
+                <a class="grey-text text-lighten-4 right" href="{{pathFor '/login'}}">Login</a>
+              {{else}}
+                <a class="grey-text text-lighten-4 right" href="{{pathFor '/profile'}}">Your profile</a>
+              {{/unless}}
+            </div>
+          </div>
+        </footer>
+</template>
