@@ -2,38 +2,42 @@
 	<div class="container">
 		<div class="section">
 	      <div class="row">
-	        <div class="col s12 center">
-	          <h4>A collective for change!</h4>
-	          <h3><i class="mdi-action-language blue-text"></i></h3>
+	      	<div class="col s12 m6">
+	      		<img src="/images/collective.png" alt="Collective" class="responsive-img">
+	      	</div>
+	        <div class="col s12 m6">
+	          {{!-- 
+	          <h3><i class="mdi-action-language blue-text"></i></h3> 
+	          <h2 class="header">A collective for change!</h2>
+	          --}}
+	          <h4>Permalab wants to build a cooperation network for pioneers in Portugal.</h4>
 	          <p class="left-align light">Permalab is an initiative focused on creating and supporting communities in Portugal. By traveling through different projects and communities we met a lot of people willing to create & support resilient, extraordinary, communitarian life perspectives. This platform wants to support and bring these people together by optimizing the coordination of gatherings, the share of informations and by supporting gift-economy initiatives.</p>
 	        </div>
 	      </div>
 	    </div>
-
-	    <div id="index-banner" class="parallax-container">
-		    <div class="section no-pad-bot">
-		      <div class="container">
-		        {{!--
-		        <br><br>
-		        <h1 class="header center teal-text text-lighten-2">
-		          <img src="/images/logo.svg" class="">
-		        </h1>
-		        <div class="row center">
-		          <h5 class="header col s12 white-text light">This plattform wants to build a cooperation network for pioneers in Portugal.</h5>
-		        </div>
-		        <div class="row center">
-		          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light light-blue darken-2">Get Started</a>
-		        </div>
-		        --}}
-		        <br><br>
-
-		      </div>
-		    </div>
-		    <div class="parallax"><img src="/images/collective.png" alt="Alentejo"></div>
-		</div>
-
-		{{> UserCards}}
 	</div>
+	{{!-- 
+    <div id="collective-banner" class="parallax-container">
+	    <div class="section no-pad-bot">
+	      <div class="container">
+	        <br><br>
+	        <h1 class="header center teal-text text-lighten-2">
+	          <img src="/images/logo.svg" class="">
+	        </h1>
+	        <div class="row center">
+	          <h5 class="header col s12 white-text light">This plattform wants to build a cooperation network for pioneers in Portugal.</h5>
+	        </div>
+	        <div class="row center">
+	          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light light-blue darken-2">Get Started</a>
+	        </div>
+	        <br><br>
+
+	      </div>
+	    </div>
+	    <div class="parallax"><img src="/images/collective.jpg" alt="Alentejo"></div>
+	</div>
+	--}}
+	{{> UserCards}}
 </template>
 
 <template name="HomeOld">
