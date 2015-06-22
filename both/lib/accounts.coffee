@@ -57,10 +57,10 @@ AccountsTemplates.configure
       signIn: "Login"
   
 
-AccountsTemplates.configureRoute 'signUp',
-    name: 'signup'
-    path: '/signup'
-    template: 'Signup'
+# AccountsTemplates.configureRoute 'signUp',
+#     name: 'signup'
+#     path: '/signup'
+#     template: 'Signup'
 
 AccountsTemplates.configureRoute 'signIn',
     name: 'signin'
@@ -84,3 +84,13 @@ AccountsTemplates.addField
   minLength: 3
   maxLength: 20
   required: true
+
+AccountsTemplates.addField
+    _id: 'invitationId'
+    type: 'hidden'
+    required: true
+
+AccountsTemplates.addField
+    _id: 'invitedBy'
+    type: 'hidden'
+    required: true

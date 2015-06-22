@@ -22,7 +22,12 @@ Template.Profile.events
 
     'submit #editProfile': (e,tmpl) ->
         e.preventDefault()
+        
+        errorMessage = $(tmpl.find('.js-error-message'))
+
         title = $('#displayName').val()
+        image = Images.findOne({'metadata.owner': Meteor.userId()},{sort: uploadedAt: -1})
+        return errorMessage.html "Please upload an image to submit your profile" unless image
 
         Users.update Meteor.userId(), $set:
             'profile.displayname': title

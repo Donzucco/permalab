@@ -14,6 +14,25 @@ FlowRouter.route '/profile',
     action: (params) ->
         FlowLayout.render('MasterLayout', { main:'Profile'})
 
+# Invite
+FlowRouter.route '/invite',
+    middlewares: [AccountsTemplates.ensureSignedIn]
+    action: (params) ->
+        FlowLayout.render('MasterLayout', { main:'Invite'})
+
+# checkInvitation = (path, next) ->
+#     current = FlowRouter.current()
+#     console.log current.params
+#     next()
+
+# Invite
+FlowRouter.route '/invitation',
+    # middlewares: [checkInvitation]
+    subscriptions: (params, queryParams) ->
+        @register('invitation', Meteor.subscribe('invitation', queryParams.invitationId))
+    action: (params) ->
+        FlowLayout.render('MasterLayout', { main:'Invitation'})
+
 # Logout
 FlowRouter.route '/logout',
     action: (params) ->

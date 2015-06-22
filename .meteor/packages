@@ -5,10 +5,12 @@
 # but you can also edit it by hand.
 
 meteor-platform
-insecure
+# insecure
 
 coffeescript
 less
+
+email
 
 service-configuration
 accounts-base
@@ -29,3 +31,6 @@ cfs:standard-packages
 cfs:gridfs
 cfs:ejson-file
 cfs:graphicsmagick
+
+# Templates server-side
+cmather:handlebars-server
