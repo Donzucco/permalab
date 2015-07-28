@@ -33,7 +33,7 @@
 // Colors
 @color-context-intention: #66a69c;
 @color-context-collective: #66a69c;
-@color-context-manifest: #e87952;
+@color-context-manifest: #66a69c;;
 @color-context-services: #679b74;
 @color-context-default: rgba(255,255,255, 0.4) ;
 @color-neutral-dark: #333;
@@ -83,6 +83,11 @@ body {
 	background-image: url("../images/natural_paper.png");
 }
 // Form 
+
+.form-horizontal .form-group {
+  margin-right: 0px;
+  margin-left: 0px;
+}
 
 .at-title h3{
 font-size: 40px;
@@ -418,13 +423,14 @@ a.list-group-item {
 // Acordion
 .panel-default > .panel-heading {
 	background-color: @color-context-default;
+  margin-bottom: 14px;
 }
 .panel-title  {
   font-family: PraterSansOne-regular;	
-  font-size: 40px;
+  font-size: 30px;
   padding: 0;
-  padding-left: 10px;
-  line-height: 60px;
+  padding-left: 5px;
+  line-height: 40px;
 }
 .panel-body  {
 	border: none;
@@ -634,6 +640,7 @@ a:hover{
 .top15 { margin-top:15px !important; }
 .top17 { margin-top:17px !important; }
 .top30 { margin-top:30px !important; }
+.top50 { margin-top:50px !important; }
 .top70 { margin-top:70px !important; }
 .bottom10 { margin-bottom:10px; }
 .bottom15 { margin-bottom:15px; }
