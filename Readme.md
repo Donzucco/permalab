@@ -5,14 +5,13 @@ Project auschecken:
 
     git clone -b meteor https://github.com/Donzucco/permalab.git
 
-
 Meteor installieren
 
     curl https://install.meteor.com/ | sh
 
 Im Projekt Ordner:
 
-    meteor
+    ./xrunner dev
 
 
 Struktur:

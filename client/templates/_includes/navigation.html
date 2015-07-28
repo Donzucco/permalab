@@ -27,18 +27,22 @@
                             <i class="fa fa-flag fa-fw fa-2x"></i> <span class="hidden-sm hidden-md hidden-lg">&nbsp;Manifest</span>
                         </a>
                     </li>
-                    <li class="{{isActivePath regex='/service' className='active'}}">
-                        <a href="{{pathFor '/service'}}" data-toggle="tooltip" data-placement="bottom" title="Services" class="color-context-services">
-                            <i class="fa fa-leaf fa-fw fa-2x"></i> <span class="hidden-sm hidden-md hidden-lg">&nbsp;Service</span>
-                        </a>
-                    </li>
+                    {{!-- 
+                        <li class="{{isActivePath regex='/service' className='active'}}">
+                            <a href="{{pathFor '/service'}}" data-toggle="tooltip" data-placement="bottom" title="Services" class="color-context-services">
+                                <i class="fa fa-leaf fa-fw fa-2x"></i> <span class="hidden-sm hidden-md hidden-lg">&nbsp;Service</span>
+                            </a>
+                        </li>
+                    --}}
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
+                    {{!-- 
+                        <li class="dropdown">
+                            <a href="{{pathFor '/solutions'}}" class="color-context-default" data-toggle="tooltip" data-placement="bottom" title="Labs"><i class="fa fa-book fa-fw fa-2x"></i> <span class="hidden-sm hidden-md hidden-lg">Solutions</span></a>
+                        </li>
+                    --}}
                     <li class="dropdown">
-                        <a href="{{pathFor '/solutions'}}" class="color-context-default" data-toggle="tooltip" data-placement="bottom" title="Labs"><i class="fa fa-book fa-fw fa-2x"></i> <span class="hidden-sm hidden-md hidden-lg">Solutions</span></a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="{{pathFor '/signup'}}" class="color-context-default" data-toggle="tooltip" data-placement="bottom" title="Profile"><i class="fa fa-user fa-fw fa-2x"></i> <span class="hidden-sm hidden-md hidden-lg">Login</span></a>
+                        <a href="{{pathFor '/profile'}}" class="color-context-default" data-toggle="tooltip" data-placement="bottom" title="Profile"><i class="fa fa-user fa-fw fa-2x"></i> <span class="hidden-sm hidden-md hidden-lg">Login</span></a>
                     </li>
                 </ul>
             </div>

@@ -31,14 +31,13 @@ Template.Profile.events
 
         Users.update Meteor.userId(), $set:
             'profile.displayname': title
-            'profile.status.alreadyLivingInAProject': $('#alreadyLivingInAProject').is(':checked')
-            'profile.status.wantToJoinAProject': $('#wantToJoinAProject').is(':checked')
-            'profile.status.wantToSupportAProject': $('#wantToSupportAProject').is(':checked')
-            'profile.status.wantToStartAProject': $('#wantToStartAProject').is(':checked')
-            'profile.status.individual': $('#individual').is(':checked')
-            'profile.status.couple': $('#couple').is(':checked')
-            'profile.status.parent': $('#parent').is(':checked')
-            'profile.status.group': $('#group').is(':checked')
+            'profile.status.scenarioDesign': $('#scenarioDesign').is(':checked')
+            'profile.status.eventDesign': $('#eventDesign').is(':checked')
+            'profile.status.softArchitecture': $('#softArchitecture').is(':checked')
+            'profile.status.permacultureDesign': $('#permacultureDesign').is(':checked')
+            'profile.status.solarEcoLowTec': $('#solarEcoLowTec').is(':checked')
+            'profile.status.education': $('#education').is(':checked')
+            'profile.status.facilitation': $('#facilitation').is(':checked')
 
 
         FlowRouter.go '/'

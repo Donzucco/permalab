@@ -5,17 +5,26 @@ FlowRouter.notfound =
 
 # Home
 FlowRouter.route '/',
+    name: 'home'
     action: (params) ->
-        FlowLayout.render('MasterLayout', { main:'Home'})
+        FlowLayout.render('MasterLayout', { main:'Intention'})
 
 # Profile
 FlowRouter.route '/profile',
+    name: 'profile'
     middlewares: [AccountsTemplates.ensureSignedIn]
     action: (params) ->
         FlowLayout.render('MasterLayout', { main:'Profile'})
 
+# Profile detail
+FlowRouter.route '/profile/:id',
+    name: 'profileDetail'
+    action: (params) ->
+        FlowLayout.render('MasterLayout', { main:'ProfileDetail'})
+
 # Invite
 FlowRouter.route '/invite',
+    name: 'invite'
     middlewares: [AccountsTemplates.ensureSignedIn]
     action: (params) ->
         FlowLayout.render('MasterLayout', { main:'Invite'})
@@ -27,6 +36,7 @@ FlowRouter.route '/invite',
 
 # Invite
 FlowRouter.route '/invitation',
+    name: 'invitation'
     # middlewares: [checkInvitation]
     subscriptions: (params, queryParams) ->
         @register('invitation', Meteor.subscribe('invitation', queryParams.invitationId))
@@ -35,22 +45,26 @@ FlowRouter.route '/invitation',
 
 # Logout
 FlowRouter.route '/logout',
+    name: 'logout'
     action: (params) ->
         Meteor.logout()
         FlowRouter.go('/')
 
+FlowRouter.route '/collective',
+    name: 'collective'
+    action: (params) ->
+        FlowLayout.render('MasterLayout', { main:'Collective'})
+
+FlowRouter.route '/manifest',
+    name: 'manifest'
+    action: (params) ->
+        FlowLayout.render('MasterLayout', { main:'Manifest'})
 
 # FlowRouter.route '/intention',
 #     action: (params) ->
 #         FlowLayout.render('MasterLayout', { main:'Intention'})
 
-# FlowRouter.route '/collective',
-#     action: (params) ->
-#         FlowLayout.render('MasterLayout', { main:'Collective'})
 
-# FlowRouter.route '/manifest',
-#     action: (params) ->
-#         FlowLayout.render('MasterLayout', { main:'Manifest'})
 
 # FlowRouter.route '/service',
 #     action: (params) ->
